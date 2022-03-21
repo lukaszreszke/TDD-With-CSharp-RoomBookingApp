@@ -21,6 +21,11 @@ namespace RoomBookingApp.Persistence.Repositories
         {
             return _context.Rooms.Where(q => !q.RoomBookings.Any(x => x.Date == date)).ToList();
         }
+        
+        public Room GetRoom(int id)
+        {
+            return _context.Rooms.First(q => q.Id == id);
+        }
 
         public IEnumerable<Room> GetRooms()
         {

@@ -9,6 +9,7 @@ namespace RoomBookingApp.Core.DataServices
         void SaveBooking(RoomBooking roomBooking);
 
         IEnumerable<Room> GetAvailableRooms(DateTime date);
+        Room GetRoom(int id);
         IEnumerable<Room> GetRooms();
     }
 }
